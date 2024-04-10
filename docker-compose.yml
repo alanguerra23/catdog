@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  database:
+    image: postgres:15
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: randompassword
+      POSTGRES_USER: johndoe
+      POSTGRES_DB: catdog
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    ports:
+      - 5050:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: johndoe@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: catdog
+    depends_on:
+      - database

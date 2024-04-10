@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "config:base",
+    ":disableDependencyDashboard"
+  ],
+  "ignorePresets": [
+    ":ignoreModulesAndTests"
+  ],
+  "rangeStrategy": "replace",
+  "automerge": true,
+  "semanticCommits": true,
+  "labels": [
+    "dependencies"
+  ],
+  "prCreation": "not-pending",
+  "dependencyDashboard": true,
+  "stabilityDays": 3,
+  "ignorePaths": [
+    "Dockerfile",
+    "package.json",
+    "pnpm-lock.yaml",
+    "yarn.lock"
+  ],
+  "assignees": [
+    "alansilvacode"
+  ],
+  "reviewers": [
+    "alansilvacode"
+  ]
+}

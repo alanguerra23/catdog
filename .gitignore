@@ -1,0 +1,18 @@
+# ============================================================
+# @alansilvacode
+# Arqivo génerico para ignorar pastas e arquivos dentro do projeto
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Arqivo para ignorar pastas e arquivos de todos os projetos dentro do monorepo
+# ============================================================
+node_modules/
+yarn.lock
+yarn-error.log
+yarn-debug.log
+pnpm-lock.yaml
+lerna-debug.log*
+.env
+.next/
+.vercel/
+next-env.d.ts
+dist/
+*.tsbuildinfo

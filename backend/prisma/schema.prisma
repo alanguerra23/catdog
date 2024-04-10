@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// genero do animal
+enum PetGender {
+  female //Fêmea
+  male //Macho
+}
+
+// Tabela de pets
+model Pet {
+  id        String    @id @default(cuid())
+  color     String
+  age       Int //idade aproximada do animal
+  gender    PetGender //genero do animal
+  breed     String //raça
+  image     String //url da imagem
+  adopted   Boolean   @default(false) //animal adotado ou nao
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}

@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": "./",
+      "name": "catdog"
+    }
+  ],
+  "settings": {
+    "typescript.tsdk": "./node_modules\\typescript\\lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.activeIconPack": "nest"
+  }
+}
